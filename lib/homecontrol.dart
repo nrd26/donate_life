@@ -1,7 +1,9 @@
-import 'package:donate_life/Components/curved_nav_bar/curved_navigation_bar.dart';
-import 'package:donate_life/Screens/Donation/current_donation.dart';
-import 'package:donate_life/Screens/History/control.dart';
+import 'package:donate_life/Components/bottomnavbar.dart';
+// import 'package:donate_life/Components/curved_nav_bar/curved_navigation_bar.dart';
+import 'package:donate_life/Components/current_donation.dart';
+import 'package:donate_life/Screens/Home/homepage.dart';
 import 'package:donate_life/Screens/Profile/profile.dart';
+import 'package:donate_life/Screens/Rewards/rewards.dart';
 import 'package:flutter/material.dart';
 
 class HomeControl extends StatefulWidget {
@@ -15,8 +17,10 @@ class _HomeControlState extends State<HomeControl> {
   int page = 0;
   GlobalKey bottomNavigationKey = GlobalKey();
   final List<Widget> children = <Widget>[
-    CurrentDonation(),
+    // CurrentDonation(),
     HistoryAndUpcoming(),
+    Rewards(),
+    // HistoryAndUpcoming(),
     Profile()
   ];
   void onTabTapped(int index) {
@@ -30,37 +34,61 @@ class _HomeControlState extends State<HomeControl> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: Container(color: Colors.red,),
-      ),
+      // drawer: Drawer(),
       appBar: AppBar(
         centerTitle: true,
-        elevation: 0,
-        title: const Text("Donate Life"),
+        elevation: 0.0,
+        title: Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/logo.png',
+                fit: BoxFit.cover,
+                height: 30,
+                width: 30,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              const Text("Donate Life",
+                style: TextStyle(
+                    color: Colors.red
+                ),
+              ),
+            ],
+          ),
+        ),
+        backgroundColor: Colors.white,
 
       ),
-      bottomNavigationBar: CurvedNavigationBar(
-          key: bottomNavigationKey,
-          backgroundColor: Colors.red,
-          buttonBackgroundColor: Colors.red,
-          color: Colors.red,
-          items: const <Widget>[
-            Icon(Icons.home, size: 30, color: Colors.white),
-            Icon(Icons.event, size: 30, color: Colors.white),
-            Icon(Icons.person, size: 30, color: Colors.white),
-          ],
-          onTap: onTabTapped
+      bottomNavigationBar: BottomNavBar(
+          selectedIndex: page,
+          onTabChanged:onTabTapped
       ),
+      // CurvedNavigationBar(
+      //     key: bottomNavigationKey,
+      //     backgroundColor: Colors.red,
+      //     buttonBackgroundColor: Colors.red,
+      //     color: Colors.red,
+      //     items: const <Widget>[
+      //       Icon(Icons.home, size: 30, color: Colors.white),
+      //       Icon(Icons.event, size: 30, color: Colors.white),
+      //       Icon(Icons.person, size: 30, color: Colors.white),
+      //     ],
+      //     onTap: onTabTapped
+      // ),
         body:
         Center(
             child: Container(
-                decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                        begin: Alignment.topCenter,
-                        end: Alignment.bottomCenter,
-                        stops: [0.3, 1],
-                        colors: [Colors.red, Colors.white])
-                ),
+              color: Colors.white,
+                // decoration: const BoxDecoration(
+                //     gradient: LinearGradient(
+                //         begin: Alignment.topCenter,
+                //         end: Alignment.bottomCenter,
+                //         stops: [0.3, 1],
+                //         colors: [Colors.red, Colors.white])
+                // ),
                 child: children[page]
 
             )

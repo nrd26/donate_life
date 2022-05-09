@@ -19,7 +19,7 @@ class _ProfileItemState extends State<ProfileItem> {
     final _height = MediaQuery.of(context).size.height;
     final _width = MediaQuery.of(context).size.width;
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.fromLTRB(8.0, 15, 8, 0),
       child: GestureDetector(
         onTap: widget.onTap,
         child: ListTile(
@@ -31,14 +31,18 @@ class _ProfileItemState extends State<ProfileItem> {
                   border: Border.all(
                     color: Colors.black12
                   ),
-                  color: Colors.white),
+                  color: Color(0xfffc0303)
+              ),
               child: Icon(
                 widget.icon,
-                color: Colors.red,
+                color: Colors.white,
               )),
           title: Text(
             widget.text,
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.w500,color: Colors.white),
+            style: TextStyle(
+                fontSize: 18,
+                // fontWeight: FontWeight.w500,
+                color: Colors.black),
           ),
         ),
       ),

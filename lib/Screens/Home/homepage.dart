@@ -1,3 +1,4 @@
+import 'package:donate_life/Components/current_donation.dart';
 import 'package:flutter/material.dart';
 
 class HistoryAndUpcoming extends StatefulWidget {
@@ -13,12 +14,15 @@ class _HistoryAndUpcomingState extends State<HistoryAndUpcoming> {
       child: Column(
         children: [
           const TabBar(
-            unselectedLabelColor: Colors.black,
-            labelColor: Colors.white,
-            indicatorColor: Colors.white,
+            unselectedLabelColor: Colors.black38,
+            labelColor: Colors.red,
+            indicator:UnderlineTabIndicator(
+              borderSide: BorderSide(color: Colors.red, width: 2),
+              insets: EdgeInsets.symmetric(horizontal: 40),
+            ),
             tabs: [
               Tab(
-                text: 'Upcoming events',
+                text: 'Active Events',
                 // icon: Icon(Icons.wb_sunny_outlined),
               ),
               Tab(
@@ -31,8 +35,8 @@ class _HistoryAndUpcomingState extends State<HistoryAndUpcoming> {
           Expanded(
             child: TabBarView(
                 children: [
-                  Container(),
-                  Container()
+                  CurrentDonation(),
+                  CurrentDonation()
                 ]
             ),
           ),

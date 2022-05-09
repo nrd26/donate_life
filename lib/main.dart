@@ -1,4 +1,4 @@
-import 'package:donate_life/Components/curved_nav_bar/curved_navigation_bar.dart';
+// import 'package:donate_life/Components/curved_nav_bar/curved_navigation_bar.dart';
 import 'package:donate_life/homecontrol.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.red
       ),
       home: HomeControl()
     );
