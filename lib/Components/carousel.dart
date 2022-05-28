@@ -11,7 +11,7 @@ class Carousel extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16.0),
                 image: const DecorationImage(
-                    image: AssetImage('assets/logo.png')
+                    image: AssetImage('assets/c1.jpg')
                 )
             ),
           ),
@@ -20,7 +20,7 @@ class Carousel extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16.0),
                 image: const DecorationImage(
-                    image: AssetImage('assets/logo.png')
+                    image: AssetImage('assets/c2.png')
                 )
             ),
           ),
@@ -30,13 +30,10 @@ class Carousel extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16.0),
                 image: const DecorationImage(
-                    image: AssetImage('assets/logo.png')
+                    image: AssetImage('assets/c3.jpg')
                 )
             ),
           ),
-
-
-
         ],
         options: CarouselOptions(
           height: 200.0,

@@ -66,29 +66,10 @@ class _HomeControlState extends State<HomeControl> {
           selectedIndex: page,
           onTabChanged:onTabTapped
       ),
-      // CurvedNavigationBar(
-      //     key: bottomNavigationKey,
-      //     backgroundColor: Colors.red,
-      //     buttonBackgroundColor: Colors.red,
-      //     color: Colors.red,
-      //     items: const <Widget>[
-      //       Icon(Icons.home, size: 30, color: Colors.white),
-      //       Icon(Icons.event, size: 30, color: Colors.white),
-      //       Icon(Icons.person, size: 30, color: Colors.white),
-      //     ],
-      //     onTap: onTabTapped
-      // ),
         body:
         Center(
             child: Container(
               color: Colors.white,
-                // decoration: const BoxDecoration(
-                //     gradient: LinearGradient(
-                //         begin: Alignment.topCenter,
-                //         end: Alignment.bottomCenter,
-                //         stops: [0.3, 1],
-                //         colors: [Colors.red, Colors.white])
-                // ),
                 child: children[page]
 
             )

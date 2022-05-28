@@ -1,5 +1,6 @@
 // import 'package:donate_life/Components/curved_nav_bar/curved_navigation_bar.dart';
 import 'package:donate_life/homecontrol.dart';
+import 'package:donate_life/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.red
       ),
-      home: HomeControl()
+      home: Splash()
     );
   }
 }
