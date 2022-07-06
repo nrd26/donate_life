@@ -56,7 +56,6 @@ class _RewardsState extends State<Rewards> {
         ),
         Carousel(),
         ClipRRect(
-          borderRadius: BorderRadius.circular(5.0),
           child: Container(
             padding: EdgeInsets.only(top:20, bottom: 10),
                 width: MediaQuery.of(context).size.width,
