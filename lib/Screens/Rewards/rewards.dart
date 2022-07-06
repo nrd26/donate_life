@@ -55,11 +55,32 @@ class _RewardsState extends State<Rewards> {
               )),
         ),
         Carousel(),
-        Text(
-            "Offers available:",
-          style: TextStyle(
-            fontSize: 25,
-            fontWeight: FontWeight.bold
+        ClipRRect(
+          borderRadius: BorderRadius.circular(5.0),
+          child: Container(
+            padding: EdgeInsets.only(top:20, bottom: 10),
+                width: MediaQuery.of(context).size.width,
+                margin: const EdgeInsets.only(bottom: 6.0), //Same as `blurRadius` i guess
+                decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5.0),
+                color: Colors.white,
+                boxShadow: [
+                BoxShadow(
+                color: Colors.grey,
+                offset: Offset(0.0, 1.0), //(x,y)
+                blurRadius: 6.0,
+                ),
+                ],
+    ),
+            child: Center(
+              child: Text(
+                  "Offers available:",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold
+                ),
+              ),
+            ),
           ),
         ),
         Expanded(

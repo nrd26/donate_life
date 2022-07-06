@@ -38,26 +38,27 @@ class _HomeControlState extends State<HomeControl> {
       appBar: AppBar(
         centerTitle: true,
         elevation: 0.0,
-        title: Container(
+        title: Padding(
+          padding: const EdgeInsets.fromLTRB(0, 0, 50, 0),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset(
-                'assets/logo.png',
-                fit: BoxFit.cover,
-                height: 30,
-                width: 30,
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              const Text("Donate Life",
-                style: TextStyle(
-                    color: Colors.red
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/logo.png',
+                  fit: BoxFit.cover,
+                  height: 30,
+                  width: 30,
                 ),
-              ),
-            ],
-          ),
+                SizedBox(
+                  width: 10,
+                ),
+                const Text("Donate Life",
+                  style: TextStyle(
+                      color: Colors.red
+                  ),
+                ),
+              ],
+            ),
         ),
         backgroundColor: Colors.white,
 
