@@ -19,9 +19,8 @@ class _CurrentDonationState extends State<CurrentDonation> {
       padding: const EdgeInsets.fromLTRB(10, 20, 10, 0),
       child: ListView(
         children: [
-
           Card(
-            elevation: 8,
+            elevation: 4,
             shadowColor: Colors.black,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(50.0),

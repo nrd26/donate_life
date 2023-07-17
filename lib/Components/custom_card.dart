@@ -19,7 +19,7 @@ class _CustomCardState extends State<CustomCard> {
           BoxShadow(
             color: Colors.redAccent,
             offset: Offset(5.0, 5.0),
-            blurRadius: 10.0,
+            blurRadius: 5.0,
             spreadRadius: 2.0
           )
         ]

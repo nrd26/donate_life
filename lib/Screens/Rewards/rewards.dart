@@ -13,7 +13,7 @@ class Rewards extends StatefulWidget {
 }
 
 class _RewardsState extends State<Rewards> {
-  Color primaryColor = Colors.red[100]!;
+  Color primaryColor = Color(0xFEEEEE);
   Color secondaryColor = Colors.red;
 
   int points = 5000;
@@ -63,17 +63,17 @@ class _RewardsState extends State<Rewards> {
                 decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(5.0),
                 color: Colors.white,
-                boxShadow: [
-                BoxShadow(
-                color: Colors.grey,
-                offset: Offset(0.0, 1.0), //(x,y)
-                blurRadius: 6.0,
-                ),
-                ],
+                // boxShadow: [
+                // BoxShadow(
+                // color: Colors.grey,
+                // offset: Offset(0.0, 1.0), //(x,y)
+                // blurRadius: 6.0,
+                // ),
+                // ],
     ),
             child: Center(
               child: Text(
-                  "Offers available:",
+                  "Redeemable Coupons:",
                 style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold
@@ -127,7 +127,7 @@ class _RewardsState extends State<Rewards> {
                         const Expanded(
                           child: Center(
                             child: Text(
-                              'ORDERS ON\nZOMATO',
+                              'ORDER ON\nZOMATO',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.white,
@@ -141,7 +141,9 @@ class _RewardsState extends State<Rewards> {
                     ),
                   ),
                   secondChild:  Container(
-                    width: double.maxFinite,
+                    decoration: BoxDecoration(
+                      color: Color(0xffFEEEEE),
+                    ),                    width: double.maxFinite,
                     padding: const EdgeInsets.all(18),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
@@ -167,7 +169,7 @@ class _RewardsState extends State<Rewards> {
                           ),
                         ),
                         Text(
-                          'To avail, navigate through the app. Offer available only on select restaurants. Points will be deducted when availed',
+                          'Apply the code on checkout. Points will be deducted when availed',
                           // textAlign: TextAlign.center,
                           style: TextStyle(
                             fontSize: 13,

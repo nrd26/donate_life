@@ -16,14 +16,17 @@ class _LocationState extends State<Location> {
       appBar: AppBar(
         title: Text("Location"),
         centerTitle: true,
+        backgroundColor: Colors.white,
+        // elevation: 0.0,
+        foregroundColor: Colors.red,
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset('assets/map_sample_image.png'),
+          Image.asset('assets/map_sample_image.png',fit: BoxFit.fill,),
           Container(
             width: MediaQuery.of(context).size.width,
-            color: Colors.red,
+            color: Colors.white,
             padding: EdgeInsets.all(20.0),
             child: Column(
               children: [
@@ -31,13 +34,13 @@ class _LocationState extends State<Location> {
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
-                  color: Colors.white
+                  color: Colors.red
                 ),
                 ),
                 Text(hospitalName,
                   style: const TextStyle(
                       fontSize: 20,
-                    color: Colors.white
+                    color: Colors.red
                   ),
                 )
               ],
